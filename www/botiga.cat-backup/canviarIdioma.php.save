@@ -1,0 +1,24 @@
+<?php
+
+    $default = "es";
+
+    setcookie('idioma', $default, time()+24*31); 
+
+    $castellano = "es";
+    $ingles = "en";
+
+    if (isset($_GET['es'])){
+                        
+        setcookie('idioma', $castellano, time()+24*31);
+
+    }
+
+    if (isset($_GET['en'])){
+    
+        setcookie('idioma', $ingles, time()+24*31);
+
+    }
+
+header
+
+?>
