@@ -8,4 +8,5 @@
     if (!isset($_COOKIE['idioma'])){
         $_COOKIE['idioma'] = obtenerIdioma();
     }
+
 ?>

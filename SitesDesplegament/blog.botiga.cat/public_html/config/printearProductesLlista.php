@@ -2,7 +2,7 @@
 
     include 'config/config-db.php';
 
-    $sql = "SELECT id, nom, descripcio, preu FROM producte";
+    $sql = "SELECT id, nom, descripcio, preu FROM productos";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

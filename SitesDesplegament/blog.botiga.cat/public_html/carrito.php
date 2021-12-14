@@ -25,11 +25,11 @@ include '../canviarIdioma.php';
 
        <div id="main">
 
-            <p style="color: red;">CARRO DESACTIVAT PER ERROR NOU DESCONEGUT<p>
+            
 
 			<div>
 				<?php
-				//include 'config/printearCarrito.php';
+				include 'config/printearCarrito.php';
 				?>
 			</div>
 			

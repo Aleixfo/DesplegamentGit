@@ -1,6 +1,5 @@
 <?php
-include '../detectarIdioma.php';
-include '../canviarIdioma.php';
+include 'detectarIdioma.php';
 ?>
 <!DOCTYPE html>
 <html>

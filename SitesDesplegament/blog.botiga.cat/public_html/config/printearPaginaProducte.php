@@ -6,7 +6,7 @@ $id = $_GET['id'];
 
 
 //$sql = "SELECT * FROM llistaProductes where id='" . $row['id'] . "'";
-$sql = "SELECT id, nom, descripcio, preu from producte";
+$sql = "SELECT id, nom, descripcio, preu from productos";
 
 
 $result = $conn->query($sql);

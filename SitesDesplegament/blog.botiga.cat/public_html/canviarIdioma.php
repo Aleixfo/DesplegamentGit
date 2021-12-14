@@ -15,6 +15,9 @@
     if (isset($_GET['ca'])){
         setcookie('idioma', $catalan, time()+24*31);
     }
+
+   header("Location:llista.php");
+    //header("refresh:0.1;url=llista.php");
     
 
 ?>
