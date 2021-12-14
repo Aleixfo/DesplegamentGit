@@ -4,6 +4,8 @@
 
     $sql = "SELECT id, nom, descripcio, preu FROM productos";
     $result = $conn->query($sql);
+    //$producte = $result -> fetch_assoc();
+    
 
     if ($result->num_rows > 0) {
 
@@ -11,7 +13,7 @@
 
             if ($_COOKIE['idioma'] == 'es') {
 
-                echo '<div><a href="producte.php?id=' . $row["id"] . '" ><img src="img/' . $row["id"] . '.jpeg" style="height: 100px; width: 100%; border-radius:10px; "/></a>' .
+                echo '<div><a href="producte.php?id=' . $row["id"] . '" ><img src="../img/' . $row["id"] . '.jpeg" style="height: 100px; width: 100%; border-radius:10px; "/></a>' .
                     "<br> · Id Producto: " . $row["id"] .
                     "<br> · Nombre: " . $row["nom"] .
                     "<br> · Descripcion: " . $row["descripcio"] .
@@ -24,7 +26,7 @@
 
             if ($_COOKIE['idioma'] == 'en') {
 
-                echo '<div><a href="producte.php?id=' . $row["id"] . '"><img src="img/' . $row["id"] . '.jpeg" style="height: 100px; width: 100%; border-radius:10px; "/></a>' .
+                echo '<div><a href="producte.php?id=' . $row["id"] . '"><img src="../img/' . $row["id"] . '.jpeg" style="height: 100px; width: 100%; border-radius:10px; "/></a>' .
                     "<br> . Id Product: " . $row["id"] .
                     "<br> . Name: " . $row["nom"] .
                     "<br> . Description: " . $row["descripcio"] .
@@ -32,11 +34,24 @@
                     "<form action='llista.php' method='POST'><br>" .
                     "<input type='hidden' name='txtproducto' value'" . $row["nom"] . "'><br>" .
                     "<input type='hidden' name='txtpreu' value'" . $row["preu"] . "'><br> " .
-                    "<input type='submit' name='botonAgregar' value='Agregar Carrito' style='width:90px;'></form><br><br><br></div>";
+                    "<input type='submit' name='botonAgregar' value='Add to bag' style='width:90px;'></form><br><br><br></div>";
+            }
+
+            if ($_COOKIE['idioma'] == 'ca') {
+
+                echo '<div><a href="producte.php?id=' . $row["id"] . '"><img src="../img/' . $row["id"] . '.jpeg" style="height: 100px; width: 100%; border-radius:10px; "/></a>' .
+                    "<br> . Id Producte: " . $row["id"] .
+                    "<br> . Nom: " . $row["nom"] .
+                    "<br> . Descripcio: " . $row["descripcio"] .
+                    "<br> . Preu: " . $row["preu"] .
+                    "<form action='llista.php' method='POST'><br>" .
+                    "<input type='hidden' name='txtproducto' value'" . $row["nom"] . "'><br>" .
+                    "<input type='hidden' name='txtpreu' value'" . $row["preu"] . "'><br> " .
+                    "<input type='submit' name='botonAgregar' value='Agregar Carreto' style='width:90px;'></form><br><br><br></div>";
             }
         }
     } else {
         echo "0 results";
     }
-
+    $conn->close();
 ?>

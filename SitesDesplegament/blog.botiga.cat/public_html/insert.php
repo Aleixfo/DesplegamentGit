@@ -1,5 +1,4 @@
 <?php 
-
         include '../config-db.php';
 
         if (!mysqli_select_db($conn, 'productes')){
@@ -19,7 +18,7 @@
           echo "Insert amb exit";
         }
 
-        header("refresh:2; url=formInsert.html");
-
         $conn->close();
+
+        header("refresh:2; url=formInsert.html");
 ?>

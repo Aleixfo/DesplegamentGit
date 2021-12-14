@@ -1,6 +1,6 @@
 <?php
 
-include '../config-db.php';
+include 'config/config-db.php';
 
 session_start();
 //session_destroy();
